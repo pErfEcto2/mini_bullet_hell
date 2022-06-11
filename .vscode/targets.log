@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 10 18:02:06 2022
+# Make data base, printed on Sat Jun 11 19:07:19 2022
 
 # Variables
 
@@ -49,7 +51,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:41344
+JOURNAL_STREAM = 8:43353
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -73,7 +75,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 1034
+MANAGERPID = 1075
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -87,7 +89,7 @@ PATH = /home/perfecto/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/perfecto1scomp:@/tmp/.ICE-unix/1601,unix/perfecto1scomp:/tmp/.ICE-unix/1601
+SESSION_MANAGER = local/perfecto1scomp:@/tmp/.ICE-unix/1506,unix/perfecto1scomp:/tmp/.ICE-unix/1506
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -97,7 +99,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = b75391a80a6e4171ab9928c20e5f0f7f
+INVOCATION_ID = 775a46631c734b0794f14017acfdb49b
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -117,7 +119,7 @@ PWD = /home/projects/cpp/mini_bullet_hell
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1558
+SSH_AGENT_PID = 1471
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -161,7 +163,7 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b24a60da-9ade-4575-a5d7-8b46ff454b90.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b0d28238-7e6b-4bf3-98c9-d5d4730206c5.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -179,7 +181,7 @@ LC_TELEPHONE = ru_RU.UTF-8
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /home/projects/cpp
+OLDPWD = /home/perfecto
 # default
 .VARIABLES := 
 # automatic
@@ -199,8 +201,6 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = ru_RU.UTF-8
 # environment
-LC_IDENTIFICATION = ru_RU.UTF-8
-# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
@@ -215,13 +215,11 @@ LC_MEASUREMENT = ru_RU.UTF-8
 # environment
 LC_ALL = C
 # environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/df2baa39_0280_48b0_b71c_154e6e5a9a3c
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/c3472d07_3605_4c9e_b3f2_fdc8fa5eb30e
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.80
+GNOME_TERMINAL_SERVICE = :1.77
 # default
 SUFFIXES := 
 # environment
@@ -231,7 +229,7 @@ WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-GJS_DEBUG_OUTPUT = stderr
+LC_IDENTIFICATION = ru_RU.UTF-8
 # default
 .RECIPEPREFIX := 
 # environment
@@ -241,9 +239,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 9930
+VSCODE_PID = 2089
 # variable set hash-table stats:
-# Load=116/1024=11%, Rehash=0, Collisions=19/143=13%
+# Load=114/1024=11%, Rehash=0, Collisions=18/141=13%
 
 # Pattern-specific Variable Values
 
@@ -251,15 +249,22 @@ VSCODE_PID = 9930
 
 # Directories
 
-# . (device 2049, inode 7865295): 9 files, no impossibilities.
+# . (device 2049, inode 7865295): 11 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+clear:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 14):
+	rm app main.o lib.o
 
 # Not a target:
 lib.cpp:
@@ -277,14 +282,12 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
-make: *** No rule to make target 'all'.  Stop.
-
-#  Last modified 2022-06-10 18:01:49.5081722
+#  Last modified 2022-06-11 19:06:29.168646643
 #  File has been updated.
 #  Successfully updated.
 
 build: main.o lib.o
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -330,19 +333,19 @@ main.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/25=0%
+# Load=12/1024=1%, Rehash=0, Collisions=0/26=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 145 B / avg = 7 B
-# current buf: size = 8162 B / used = 145 B / count = 19 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 166 B / avg = 7 B
+# current buf: size = 8162 B / used = 166 B / count = 22 / avg = 7 B
 
-# strcache performance: lookups = 28 / hit rate = 32%
+# strcache performance: lookups = 32 / hit rate = 31%
 # hash-table stats:
-# Load=19/8192=0%, Rehash=0, Collisions=1/28=4%
-# Finished Make data base on Fri Jun 10 18:02:06 2022
+# Load=22/8192=0%, Rehash=0, Collisions=1/32=3%
+# Finished Make data base on Sat Jun 11 19:07:19 2022
 
  

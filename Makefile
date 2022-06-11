@@ -9,3 +9,6 @@ main: $(mainFile)
 
 build: main.o lib.o
 	g++ lib.o main.o -lsfml-graphics -lsfml-window -lsfml-system -o app
+
+clear:
+	rm app main.o lib.o
