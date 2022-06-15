@@ -51,7 +51,7 @@ int main() {
                     break;
 
                 case game:
-                    man.move(keyboard, event);
+                    man.control(keyboard, event);
                 
                 case end:
                     break;

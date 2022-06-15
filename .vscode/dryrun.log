@@ -1,7 +1,5 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/projects/cpp/mini_bullet_hell'
- 
 g++ -c lib.cpp
- 
 make: Leaving directory '/home/projects/cpp/mini_bullet_hell'
  
