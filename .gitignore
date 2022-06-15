@@ -3,3 +3,5 @@ main.o
 lib.o
 .vscode
 .vscode/
+/.vscode
+/.vscode/
